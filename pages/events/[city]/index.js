@@ -35,7 +35,6 @@ export const getStaticProps = (context) => {
 		const events = allEvents.filter(ev => ev.city == city)
 		const cityObj = events_categories.find(ct => ct.id == city)
 		const pageTitle = cityObj ? cityObj.title : ""
-		console.log("pageTitle", pageTitle)
 		return { props: { events, pageTitle, }, }
 	})
 }
