@@ -1,20 +1,8 @@
+import CityPage from '../../../src/components/cityPage'
+
 const City = ({ events, pageTitle, }) => {
 	return (
-		<div>
-			<h1>{pageTitle}</h1>
-			<div>
-				{
-					events.map(({ id, title, city, description, image, }) => (
-						<a key={id} href={`/events/${city}/${id}`}>
-							<img src={image} alt={title} />
-							<h2>{title}</h2>
-							<p>{description}</p>
-						</a>
-					))
-				}
-
-			</div>
-		</div>
+		<CityPage events={events} pageTitle={pageTitle} />
 	)
 }
 
