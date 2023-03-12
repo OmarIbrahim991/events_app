@@ -1,4 +1,4 @@
-const Events = ({ events, pageTitle, }) => {
+const City = ({ events, pageTitle, }) => {
 	return (
 		<div>
 			<h1>{pageTitle}</h1>
@@ -20,9 +20,9 @@ const Events = ({ events, pageTitle, }) => {
 
 export const getStaticPaths = () => {
 	return import("../../../data/data.json").then((data) => {
-		const { allEvents, } = data
+		const { all_events, } = data
 		return {
-			paths: allEvents.map(({ city, }) => ({ params: { city, }, })),
+			paths: all_events.map(({ city, }) => ({ params: { city, }, })),
 			fallback: false,
 		}
 	})
@@ -30,13 +30,13 @@ export const getStaticPaths = () => {
 
 export const getStaticProps = (context) => {
 	return import("../../../data/data.json").then((data) => {
-		const { allEvents, events_categories, } = data
+		const { all_events, events_categories, } = data
 		const { city, } = context.params
-		const events = allEvents.filter(ev => ev.city == city)
+		const events = all_events.filter(ev => ev.city == city)
 		const cityObj = events_categories.find(ct => ct.id == city)
 		const pageTitle = cityObj ? cityObj.title : ""
 		return { props: { events, pageTitle, }, }
 	})
 }
 
-export default Events
+export default City
