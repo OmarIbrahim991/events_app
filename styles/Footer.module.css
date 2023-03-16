@@ -1,0 +1,8 @@
+.footer {
+	background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+	margin: 0;
+	padding: 0.1em;
+	text-align: center;
+	font-weight: 600;
+	min-height: 60px;
+}

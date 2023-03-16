@@ -1,3 +1,10 @@
+:root {
+	--main-color: #000;
+	--secondary-color: #e66465;
+	--accent-color: #9198e5;
+	--light: hsla(220, 100%, 80%, 0.4);
+}
+
 html,
 body {
 	padding: 0;

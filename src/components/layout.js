@@ -1,11 +1,12 @@
-import Footer from "./footer"
-import Header from "./header"
+import styles from '../../styles/Layout.module.css'
+import Footer from './footer'
+import Header from './header'
 
 const MainLayout = ({ children }) => {
 	return (
 		<>
 			<Header />
-			<main>
+			<main className={styles.layout}>
 				{children}
 			</main>
 			<Footer />

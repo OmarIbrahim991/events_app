@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import HomePage from '../src/components/homePage'
-import styles from '../styles/Home.module.css'
 
 const Home = ({ events_categories, }) => {
 	return (

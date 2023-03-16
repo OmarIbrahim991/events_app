@@ -1,0 +1,15 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: linear-gradient(225deg, var(--secondary-color), var(--accent-color));
+	min-height: 60px;
+	padding-inline: 2em;
+}
+
+.nav {
+	display: flex;
+	justify-content: space-between;
+	gap: 2rem;
+	font-weight: 700;
+}
