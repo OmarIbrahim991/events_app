@@ -25,7 +25,7 @@ export const getStaticPaths = () => {
 export const getStaticProps = (context) => {
 	return import("../../../../data/data.json").then((data) => {
 		const { event_id, } = context.params
-		const { all_events } = data
+		const { all_events, } = data
 		return {
 			props: { ...all_events.find(({ id, }) => id == event_id), },
 		}
