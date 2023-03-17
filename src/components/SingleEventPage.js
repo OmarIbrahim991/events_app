@@ -1,10 +1,11 @@
 import Image from 'next/image'
+import styles from '../../styles/SingleEvent.module.css'
 
 const SingleEventPage = ({ title, image, description, }) => {
 	return (
-		<div>
+		<div className={styles.container}>
 			<h1>{title}</h1>
-			<Image width={1000} height={750} src={image} alt={title} />
+			<Image width={1000} height={650} src={image} alt={title} />
 			<p>{description}</p>
 		</div>
 	)

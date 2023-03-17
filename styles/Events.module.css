@@ -1,0 +1,14 @@
+.container {
+	display: flex;
+	gap: 1em;
+}
+
+.card {
+	flex: 1;
+	text-align: center;
+}
+
+.imageContainer {
+	position: relative;
+	height: 300px;
+}

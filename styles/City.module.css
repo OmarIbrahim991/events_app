@@ -1,0 +1,10 @@
+.container {
+	display: grid;
+	gap: 1em;
+	grid-template-columns: repeat(3, minmax(min-content, 1fr));
+}
+
+.imageContainer {
+	position: relative;
+	height: 300px;
+}
