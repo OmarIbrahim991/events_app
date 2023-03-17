@@ -1,8 +1,14 @@
+import Head from 'next/head'
 import CityPage from '../../../src/components/cityPage'
 
 const City = ({ events, pageTitle, }) => {
 	return (
-		<CityPage events={events} pageTitle={pageTitle} />
+		<>
+			<Head>
+				<title>{pageTitle}</title>
+			</Head>
+			<CityPage events={events} pageTitle={pageTitle} />
+		</>
 	)
 }
 

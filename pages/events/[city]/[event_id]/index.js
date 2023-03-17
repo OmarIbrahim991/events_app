@@ -1,13 +1,19 @@
+import Head from 'next/head'
 import SingleEventPage from '../../../../src/components/SingleEventPage'
 
 const Event = (props) => {
 	return (
-		<SingleEventPage {...props} />
+		<>
+			<Head>
+				<title>{props.title}</title>
+			</Head>
+			<SingleEventPage {...props} />
+		</>
 	)
 }
 
 export const getStaticPaths = () => {
-	return import ("../../../../data/data.json").then((data) => {
+	return import("../../../../data/data.json").then((data) => {
 		const { all_events, } = data
 		return {
 			paths: all_events.map(({ id, city, }) => ({ params: { event_id: id, city, } })),
@@ -17,7 +23,7 @@ export const getStaticPaths = () => {
 }
 
 export const getStaticProps = (context) => {
-	return import ("../../../../data/data.json").then((data) => {
+	return import("../../../../data/data.json").then((data) => {
 		const { event_id, } = context.params
 		const { all_events } = data
 		return {

@@ -1,8 +1,14 @@
+import Head from 'next/head'
 import EventsPage from '../../src/components/eventsPage'
 
 const Events = ({ events_categories, }) => {
 	return (
-		<EventsPage events_categories={events_categories} />
+		<>
+			<Head>
+				<title>Events</title>
+			</Head>
+			<EventsPage events_categories={events_categories} />
+		</>
 	)
 }
 
