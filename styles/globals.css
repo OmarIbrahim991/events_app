@@ -1,8 +1,9 @@
 :root {
 	--main-color: #112;
+	--primary-color: #23e;
 	--secondary-color: #e66465;
 	--accent-color: #9198e5;
-	--light: hsla(220, 100%, 80%, 0.4);
+	--light-color: hsla(220, 100%, 80%, 0.4);
 }
 
 html,
