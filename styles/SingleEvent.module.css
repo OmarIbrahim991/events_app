@@ -3,3 +3,39 @@
 	flex-direction: column;
 	align-items: center;
 }
+
+.form {
+	margin-top: 30px;
+}
+
+.form h3 {
+	text-decoration: underline;
+	font-weight: 700;
+	text-align: center;
+}
+
+.form input, .form button {
+	height: 30px;
+}
+
+.form input {
+	width: 300px;
+	font-size: 100%;
+}
+
+.form button {
+	width: 75px;
+	border: 2px solid var(--main-color);
+	border-radius: 5px;
+	margin-inline: 10px;
+	background: linear-gradient(225deg, var(--secondary-color), var(--accent-color));
+	cursor: pointer;
+}
+
+.form button:hover {
+	background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+}
+
+.message {
+	color: #23e;
+}
